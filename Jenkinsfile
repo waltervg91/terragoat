@@ -2,9 +2,6 @@ pipeline {
      agent any
         
      stages {
-          agent {
-             docker { image 'docker:24.0.5' } // imagen oficial de Docker con CLI
-         }
          stage('Checkout') {
              steps {
                  git branch: 'master', url: 'https://github.com/bridgecrewio/terragoat'
